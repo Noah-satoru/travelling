@@ -1,0 +1,255 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f8f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: url('assets/img/cairo.jpg') center/cover no-repeat;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.header-content {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #3ca974;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #319964;
+}
+
+/* PACOTES */
+.pacotes {
+  padding: 60px 20px;
+  background-color: #e8f5ea;
+}
+
+.pacotes-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.pacotes-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  max-width: 320px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2d7248;
+}
+
+.card-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card-content li {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-tag-top,
+.card-tag-bottom {
+  position: absolute;
+  background-color: #3ca974;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.card-tag-top {
+  top: 10px;
+  left: 10px;
+}
+
+.card-tag-bottom {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* SERVIÇOS */
+.servicos {
+  padding: 60px 20px;
+  background-color: #f9fff7;
+}
+
+.servicos-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.servicos-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.servicos-card .card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.servicos-card h3 {
+  color: #2d7248;
+  margin: 10px 0;
+}
+
+.servicos-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* CONTATO */
+.contato {
+  padding: 60px 20px;
+  background-color: #d6f0dd;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.contato-card {
+  max-width: 400px;
+}
+
+.contato-card h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #2d7248;
+}
+
+.contato-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contato-card li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+iframe {
+  border-radius: 10px;
+  border: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .pacotes-cards,
+  .servicos-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    height: auto;
+    padding: 20px;
+  }
+
+  .header-content h1 {
+    font-size: 2.5rem;
+  }
+}
